@@ -1,0 +1,20 @@
+{block content}
+	<div class="article" n:foreach="$articles as $article">
+		<h3>{$article->getTitle()}</h3>
+
+		Category:
+		{if $article->getCategory()}
+			{$article->getCategory()->getName()}
+		{else}
+			<i>no category</i>
+		{/if}
+
+		{!$article->getContentHtml()}
+
+		Tags:
+		{foreach $article->getTags() as $tag}
+			{$tag->getName()}{sep}, {/sep}
+		{/foreach}
+		<i n:if="!count($article->getTags())">no tags</i>
+	</div>
+{/block}

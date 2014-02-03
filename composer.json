@@ -1,0 +1,7 @@
+{
+	"require": {
+		"nette/nette": "2.1.*",
+		"doctrine/orm": "2.4.*",
+		"kdyby/doctrine": "1.1.*"
+	}
+}

@@ -1,0 +1,16 @@
+php:
+	date.timezone: Europe/Prague
+	# zlib.output_compression: yes
+
+nette:
+	application:
+		mapping:
+			*: App\*Module\*Presenter
+
+includes:
+	- doctrine.config.neon
+	- config.local.neon
+
+services:
+	- App\RouterFactory
+	router: @App\RouterFactory::createRouter

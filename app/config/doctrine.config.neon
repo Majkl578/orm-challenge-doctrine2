@@ -1,0 +1,16 @@
+extensions:
+	annotations: Kdyby\Annotations\DI\AnnotationsExtension
+	events: Kdyby\Events\DI\EventsExtension
+	doctrine: Kdyby\Doctrine\DI\OrmExtension
+
+doctrine:
+	driver: pdo_mysql
+	host: 127.0.0.1
+	user: changeme
+	password: changeme
+	dbname: changeme
+	charset: utf8
+	metadata:
+		App\Model: %appDir%/Model
+	proxyDir: %tempDir%/proxies
+	proxyNamespace: App\Model\Proxies
